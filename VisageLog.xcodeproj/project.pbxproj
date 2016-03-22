@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		DA396D311C9C97B70027293D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA396D301C9C97B70027293D /* AppDelegate.swift */; };
-		DA396D331C9C97B70027293D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA396D321C9C97B70027293D /* ViewController.swift */; };
+		DA396D331C9C97B70027293D /* TakePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA396D321C9C97B70027293D /* TakePictureViewController.swift */; };
 		DA396D361C9C97B70027293D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA396D341C9C97B70027293D /* Main.storyboard */; };
 		DA396D381C9C97B70027293D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA396D371C9C97B70027293D /* Assets.xcassets */; };
 		DA396D3B1C9C97B70027293D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA396D391C9C97B70027293D /* LaunchScreen.storyboard */; };
 		DA396D461C9C97B70027293D /* VisageLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA396D451C9C97B70027293D /* VisageLogTests.swift */; };
 		DA396D511C9C97B70027293D /* VisageLogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA396D501C9C97B70027293D /* VisageLogUITests.swift */; };
+		DA396D5F1C9CA1C30027293D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA396D5E1C9CA1C30027293D /* Photo.swift */; };
+		DA396D621C9CA8480027293D /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA396D611C9CA8480027293D /* CoreDataStackManager.swift */; };
+		DA396D651C9CA86D0027293D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA396D631C9CA86D0027293D /* Model.xcdatamodeld */; };
+		DA396D671C9CAA750027293D /* CloudVisionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA396D661C9CAA750027293D /* CloudVisionClient.swift */; };
+		DA396D691C9CB7E80027293D /* AnalyzePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA396D681C9CB7E80027293D /* AnalyzePhotoViewController.swift */; };
+		DA396D6B1CA1A3C40027293D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA396D6A1CA1A3C40027293D /* CollectionViewController.swift */; };
+		DA396D6D1CA1A9D40027293D /* MoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA396D6C1CA1A9D40027293D /* MoodCollectionViewCell.swift */; };
+		DA396D6F1CA1CABA0027293D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA396D6E1CA1CABA0027293D /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,7 @@
 /* Begin PBXFileReference section */
 		DA396D2D1C9C97B70027293D /* VisageLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisageLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA396D301C9C97B70027293D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA396D321C9C97B70027293D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA396D321C9C97B70027293D /* TakePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePictureViewController.swift; sourceTree = "<group>"; };
 		DA396D351C9C97B70027293D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA396D371C9C97B70027293D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA396D3A1C9C97B70027293D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,14 @@
 		DA396D4C1C9C97B70027293D /* VisageLogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisageLogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA396D501C9C97B70027293D /* VisageLogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisageLogUITests.swift; sourceTree = "<group>"; };
 		DA396D521C9C97B70027293D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA396D5E1C9CA1C30027293D /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		DA396D611C9CA8480027293D /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
+		DA396D641C9CA86D0027293D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		DA396D661C9CAA750027293D /* CloudVisionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudVisionClient.swift; sourceTree = "<group>"; };
+		DA396D681C9CB7E80027293D /* AnalyzePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzePhotoViewController.swift; sourceTree = "<group>"; };
+		DA396D6A1CA1A3C40027293D /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		DA396D6C1CA1A9D40027293D /* MoodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		DA396D6E1CA1CABA0027293D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +113,13 @@
 		DA396D2F1C9C97B70027293D /* VisageLog */ = {
 			isa = PBXGroup;
 			children = (
+				DA396D601C9CA82E0027293D /* Model */,
 				DA396D301C9C97B70027293D /* AppDelegate.swift */,
-				DA396D321C9C97B70027293D /* ViewController.swift */,
+				DA396D321C9C97B70027293D /* TakePictureViewController.swift */,
+				DA396D681C9CB7E80027293D /* AnalyzePhotoViewController.swift */,
+				DA396D6A1CA1A3C40027293D /* CollectionViewController.swift */,
 				DA396D341C9C97B70027293D /* Main.storyboard */,
+				DA396D6C1CA1A9D40027293D /* MoodCollectionViewCell.swift */,
 				DA396D371C9C97B70027293D /* Assets.xcassets */,
 				DA396D391C9C97B70027293D /* LaunchScreen.storyboard */,
 				DA396D3C1C9C97B70027293D /* Info.plist */,
@@ -123,6 +143,18 @@
 				DA396D521C9C97B70027293D /* Info.plist */,
 			);
 			path = VisageLogUITests;
+			sourceTree = "<group>";
+		};
+		DA396D601C9CA82E0027293D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA396D611C9CA8480027293D /* CoreDataStackManager.swift */,
+				DA396D631C9CA86D0027293D /* Model.xcdatamodeld */,
+				DA396D5E1C9CA1C30027293D /* Photo.swift */,
+				DA396D661C9CAA750027293D /* CloudVisionClient.swift */,
+				DA396D6E1CA1CABA0027293D /* Extensions.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +288,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA396D331C9C97B70027293D /* ViewController.swift in Sources */,
+				DA396D5F1C9CA1C30027293D /* Photo.swift in Sources */,
+				DA396D6D1CA1A9D40027293D /* MoodCollectionViewCell.swift in Sources */,
+				DA396D691C9CB7E80027293D /* AnalyzePhotoViewController.swift in Sources */,
+				DA396D671C9CAA750027293D /* CloudVisionClient.swift in Sources */,
+				DA396D621C9CA8480027293D /* CoreDataStackManager.swift in Sources */,
+				DA396D6F1CA1CABA0027293D /* Extensions.swift in Sources */,
+				DA396D6B1CA1A3C40027293D /* CollectionViewController.swift in Sources */,
+				DA396D651C9CA86D0027293D /* Model.xcdatamodeld in Sources */,
+				DA396D331C9C97B70027293D /* TakePictureViewController.swift in Sources */,
 				DA396D311C9C97B70027293D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = VisageLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MWaller.VisageLog;
@@ -408,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = VisageLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MWaller.VisageLog;
@@ -500,6 +542,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DA396D631C9CA86D0027293D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DA396D641C9CA86D0027293D /* Model.xcdatamodel */,
+			);
+			currentVersion = DA396D641C9CA86D0027293D /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DA396D251C9C97B70027293D /* Project object */;
 }
