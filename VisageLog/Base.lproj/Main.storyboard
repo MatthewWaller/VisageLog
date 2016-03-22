@@ -221,7 +221,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="gha-qa-8tv">
-                                <rect key="frame" x="20" y="64" width="280" height="204"/>
+                                <rect key="frame" x="20" y="84" width="280" height="184"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Joy likelihood: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q36-Vc-Pph">
                                 <rect key="frame" x="20" y="276" width="280" height="21"/>
@@ -312,7 +312,7 @@
                             <constraint firstAttribute="bottomMargin" secondItem="GLE-fR-SaD" secondAttribute="bottom" id="cgM-b6-gBX"/>
                             <constraint firstItem="Q36-Vc-Pph" firstAttribute="top" secondItem="gha-qa-8tv" secondAttribute="bottom" constant="8" id="cgX-jR-M0z"/>
                             <constraint firstItem="Q36-Vc-Pph" firstAttribute="leading" secondItem="BSd-TC-CvB" secondAttribute="leading" constant="20" id="dG3-zT-oab"/>
-                            <constraint firstItem="gha-qa-8tv" firstAttribute="top" secondItem="R64-bJ-itn" secondAttribute="bottom" id="f58-Nr-2EQ"/>
+                            <constraint firstItem="gha-qa-8tv" firstAttribute="top" secondItem="R64-bJ-itn" secondAttribute="bottom" constant="20" id="f58-Nr-2EQ"/>
                             <constraint firstItem="mmw-9C-Lap" firstAttribute="leading" secondItem="BSd-TC-CvB" secondAttribute="leading" constant="20" id="i51-ZL-Mw0"/>
                             <constraint firstItem="76D-cw-bvJ" firstAttribute="leading" secondItem="BSd-TC-CvB" secondAttribute="leading" constant="20" id="m5J-33-ymh"/>
                             <constraint firstAttribute="trailing" secondItem="76D-cw-bvJ" secondAttribute="trailing" constant="20" id="oMi-xY-FhH"/>

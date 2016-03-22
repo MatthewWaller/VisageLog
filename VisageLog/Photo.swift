@@ -38,10 +38,17 @@ class Photo: NSManagedObject {
         
     }
     
-    
-
-    //TODO: add deletion functionality here
-    
+    override func prepareForDeletion() {
+        let documentsDirectory = CloudVisionClient.sharedInstance().databaseURL()
+        
+        let fileURL = documentsDirectory?.URLByAppendingPathComponent(fileName!)
+        
+        do {
+            try NSFileManager.defaultManager().removeItemAtURL(fileURL!)
+        } catch {
+            
+        }
+    }
     
     
 }

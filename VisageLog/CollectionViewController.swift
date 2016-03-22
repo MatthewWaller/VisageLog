@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import CoreData
 
+
+
 class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, NSFetchedResultsControllerDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -21,6 +23,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     var selectedPhoto: Photo?
     
     var sharedContext = CoreDataStackManager.sharedInstance().managedObjectContext
+    
     
     // MARK: - NSFetchedResultsController
     
@@ -161,10 +164,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     func handleLongPress(gestureRecognizer : UILongPressGestureRecognizer){
         
-        if (gestureRecognizer.state != UIGestureRecognizerState.Ended){
-            return
-        }
-        
         let p = gestureRecognizer.locationInView(self.collectionView)
         
         if let indexPath = (self.collectionView?.indexPathForItemAtPoint(p))! as NSIndexPath? {
@@ -173,28 +172,28 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
     }
     
-    func deleteAlert(indexPath: NSIndexPath){
+    func UIAlertControllerForDeletion(message: String?, indexPath: NSIndexPath) -> UIAlertController {
         
-        let accessAlert = UIAlertController(title:"Delete Photo?", message: "Did you want to delete this photo?", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        let okAction = UIAlertAction(title: "Yes, delete it", style: UIAlertActionStyle.Default, handler: { (alert: UIAlertAction!) -> Void in
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes, delete", style: .Default, handler: { (alert: UIAlertAction!) -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
                 self.doDeletion(indexPath)
                 
             })
         })
+)
+        return alert
+    }
+    
+    func deleteAlert(indexPath: NSIndexPath){
         
+        if self.presentedViewController == nil {
         
-        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel",comment:""), style: UIAlertActionStyle.Cancel, handler: { (alert: UIAlertAction) -> Void in
-            
-        })
-        accessAlert.addAction(okAction)
-        accessAlert.addAction(cancelAction)
+       self.presentViewController(UIAlertControllerForDeletion("Are you sure you want to delete?", indexPath: indexPath), animated: true, completion: nil)
+        }
         
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.presentViewController(accessAlert, animated: true, completion: nil)
-        })
         
     }
     
