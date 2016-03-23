@@ -17,8 +17,12 @@ class TakePictureViewController: UIViewController, UINavigationControllerDelegat
     var photoLibraryIsAllowed = true
     var imageToPass: UIImage?
 
+    @IBOutlet weak var getImageButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getImageButton.layer.cornerRadius = 10
         
         AVCaptureDevice.requestAccessForMediaType(AVMediaTypeVideo) { (granted) -> Void in
         if !granted {

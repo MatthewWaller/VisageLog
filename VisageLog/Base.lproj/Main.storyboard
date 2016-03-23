@@ -183,8 +183,14 @@
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3i-GN-q1u">
-                                <rect key="frame" x="125" y="393" width="71" height="30"/>
-                                <state key="normal" title="Get Image"/>
+                                <rect key="frame" x="116" y="351" width="89" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="7na-IL-cVI"/>
+                                </constraints>
+                                <state key="normal" title="Get Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="getImage:" destination="llV-4K-89b" eventType="touchUpInside" id="mBZ-HM-wtg"/>
                                 </connections>
@@ -192,7 +198,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="trG-Kj-wWy" firstAttribute="top" secondItem="n3i-GN-q1u" secondAttribute="bottom" constant="8" id="GqM-Ut-063"/>
+                            <constraint firstItem="n3i-GN-q1u" firstAttribute="top" secondItem="JcZ-dl-hps" secondAttribute="bottom" constant="8" id="6oL-wd-NHf"/>
                             <constraint firstItem="JcZ-dl-hps" firstAttribute="centerX" secondItem="4GH-vz-xza" secondAttribute="centerX" id="mE4-5t-hhq"/>
                             <constraint firstItem="n3i-GN-q1u" firstAttribute="centerX" secondItem="4GH-vz-xza" secondAttribute="centerX" id="ptB-xs-sbe"/>
                             <constraint firstItem="JcZ-dl-hps" firstAttribute="centerY" secondItem="4GH-vz-xza" secondAttribute="centerY" id="zj0-tB-1WK"/>
@@ -201,6 +207,7 @@
                     <navigationItem key="navigationItem" title="Get Visage" id="G0b-qW-qqf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="getImageButton" destination="n3i-GN-q1u" id="k8b-eJ-F7I"/>
                         <segue destination="6Kr-B8-aUu" kind="show" identifier="photoSegue" id="ahR-JI-iWi"/>
                     </connections>
                 </viewController>
@@ -406,7 +413,7 @@
         <scene sceneID="YYv-SP-0tw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Pu-56-Ltj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Camera" id="efM-TE-uH0"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="Camera" selectedImage="Camera" id="efM-TE-uH0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nao-iF-C48">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -425,7 +432,7 @@
         <scene sceneID="wXw-DU-GHp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pid-Zk-hzP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection" id="YFg-gU-mN7"/>
+                    <tabBarItem key="tabBarItem" title="Collection" image="Collection" selectedImage="Collection" id="YFg-gU-mN7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RZh-hd-07B">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -441,7 +448,11 @@
             <point key="canvasLocation" x="122" y="918"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera" width="250" height="250"/>
+        <image name="Collection" width="250" height="61"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ntW-zJ-LHx"/>
+        <segue reference="ahR-JI-iWi"/>
     </inferredMetricsTieBreakers>
 </document>

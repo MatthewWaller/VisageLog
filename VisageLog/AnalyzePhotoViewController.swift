@@ -48,7 +48,7 @@ class AnalyzePhotoViewController: UIViewController, UITextFieldDelegate {
             CloudVisionClient.sharedInstance().createRequest(binaryImageData, completionHandler: { (result, error) -> Void in
             
             if error != nil {
-                self.presentErrorAlert("Error from cloud: \(error?.localizedDescription)")
+                self.presentErrorAlert("Error from cloud: \(error?.localizedDescription)!")
                 } else {
                 
                     if result != nil {

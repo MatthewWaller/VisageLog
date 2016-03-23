@@ -12,7 +12,7 @@ import CoreData
 
 class CloudVisionClient {
     
-    var API_KEY = "AIzaSyBUia5AchKJEBiFqIPCYyNsZ_zY1UhCHoY"
+    let API_KEY = "AIzaSyBUia5AchKJEBiFqIPCYyNsZ_zY1UhCHoY"
     
     func createRequest(imageData: String, completionHandler: (result: AnyObject!, error: NSError?) -> Void) {
         
@@ -55,11 +55,17 @@ class CloudVisionClient {
         // run the request
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
             
-            CloudVisionClient.parseJSONWithCompletionHandler(data!, completionHandler: { (result, error) -> Void in
-                
-                completionHandler(result: result, error: error) // this sends it back to create request
-            })
+            if error == nil {
+            
+                CloudVisionClient.parseJSONWithCompletionHandler(data!, completionHandler: { (result, error) -> Void in
+                    
+                    completionHandler(result: result, error: error) // this sends it back to create request
+                })
+            } else {
+                completionHandler(result: nil, error: error)
+            }
         })
+            
         task.resume()
     }
     
