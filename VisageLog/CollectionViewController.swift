@@ -54,7 +54,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        // Lay out the collection view so that cells take up 1/3 of the width,
+        // Lay out the collection view so that cells take up 1/2 of the width,
         // with no space in between.
         let layout : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         
