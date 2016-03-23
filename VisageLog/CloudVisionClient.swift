@@ -117,8 +117,6 @@ class CloudVisionClient {
             let urlWithoutExtension = fileURL?.URLByDeletingPathExtension
             let oldFileName = urlWithoutExtension?.lastPathComponent
             
-            print("lastFileName")
-            
             let newFileName = "\(oldFileName)1.png"
             
             let urlWithoutLastPathComponent = fileURL?.URLByDeletingLastPathComponent
@@ -137,8 +135,6 @@ class CloudVisionClient {
             imageData.writeToURL(fileURL!, atomically: true)
             
         }
-        
-        print(cloudResponse["joyString"])
         
         _ = Photo(fileName: fileName!, creationDate: creationDate,
             joyResponse: cloudResponse["joyString"]!,
