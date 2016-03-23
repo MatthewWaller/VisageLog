@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -15,24 +16,12 @@
                         <viewControllerLayoutGuide type="bottom" id="Sub-c9-BGz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MuK-LO-GRV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longpress to delete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSo-SZ-2FP">
-                                <rect key="frame" x="8" y="373" width="304" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to examine or edit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJS-Nz-ieY">
-                                <rect key="frame" x="75" y="402" width="170" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xZz-qb-AQg">
-                                <rect key="frame" x="0.0" y="64" width="320" height="301"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.78823529410000004" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xo6-HY-Rmj">
                                     <size key="itemSize" width="142" height="261"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -47,74 +36,75 @@
                                             <rect key="frame" x="0.0" y="0.0" width="142" height="261"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surprise:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hv-64-pJj">
-                                                    <rect key="frame" x="0.0" y="238" width="142" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surprise:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hv-64-pJj">
+                                                    <rect key="frame" x="8" y="238" width="134" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="lEA-KW-ogT"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorrow:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTg-KM-aIe">
-                                                    <rect key="frame" x="0.0" y="215" width="142" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorrow:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTg-KM-aIe">
+                                                    <rect key="frame" x="8" y="215" width="134" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="VJz-H9-roz"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anger:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FQ-76-d3O">
-                                                    <rect key="frame" x="0.0" y="192" width="142" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anger:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FQ-76-d3O">
+                                                    <rect key="frame" x="8" y="192" width="134" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="mWk-cW-mpn"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joy:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMJ-Oo-XdS">
-                                                    <rect key="frame" x="0.0" y="169" width="142" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joy:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMJ-Oo-XdS">
+                                                    <rect key="frame" x="8" y="169" width="134" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="I6z-26-fHx"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71B-Kb-LB8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="142" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71B-Kb-LB8">
+                                                    <rect key="frame" x="0.0" y="4" width="134" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="R0V-Vi-b45"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hyl-Fm-0oi">
-                                                    <rect key="frame" x="0.0" y="23" width="142" height="138"/>
+                                                    <rect key="frame" x="8" y="23" width="126" height="138"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="5FQ-76-d3O" firstAttribute="top" secondItem="dMJ-Oo-XdS" secondAttribute="bottom" constant="8" id="0Lu-Xo-mZx"/>
                                             <constraint firstItem="71B-Kb-LB8" firstAttribute="leading" secondItem="HuU-TD-Bs7" secondAttribute="leading" id="3PQ-Us-1Kk"/>
-                                            <constraint firstItem="71B-Kb-LB8" firstAttribute="top" secondItem="HuU-TD-Bs7" secondAttribute="top" id="5Tx-Zt-myw"/>
+                                            <constraint firstItem="71B-Kb-LB8" firstAttribute="top" secondItem="HuU-TD-Bs7" secondAttribute="top" constant="4" id="5Tx-Zt-myw"/>
                                             <constraint firstAttribute="bottom" secondItem="9hv-64-pJj" secondAttribute="bottom" constant="8" id="68v-aE-yDa"/>
-                                            <constraint firstItem="5FQ-76-d3O" firstAttribute="leading" secondItem="HuU-TD-Bs7" secondAttribute="leading" id="8jr-1j-zEV"/>
+                                            <constraint firstItem="5FQ-76-d3O" firstAttribute="leading" secondItem="HuU-TD-Bs7" secondAttribute="leading" constant="8" id="8jr-1j-zEV"/>
                                             <constraint firstItem="mTg-KM-aIe" firstAttribute="top" secondItem="5FQ-76-d3O" secondAttribute="bottom" constant="8" id="Gmd-hW-mMK"/>
                                             <constraint firstItem="dMJ-Oo-XdS" firstAttribute="top" secondItem="hyl-Fm-0oi" secondAttribute="bottom" constant="8" id="Kag-q1-Y31"/>
-                                            <constraint firstItem="hyl-Fm-0oi" firstAttribute="leading" secondItem="HuU-TD-Bs7" secondAttribute="leading" id="Kjk-dC-nV0"/>
-                                            <constraint firstItem="hyl-Fm-0oi" firstAttribute="top" secondItem="71B-Kb-LB8" secondAttribute="bottom" constant="8" id="MZ6-o2-Tia"/>
-                                            <constraint firstItem="dMJ-Oo-XdS" firstAttribute="leading" secondItem="HuU-TD-Bs7" secondAttribute="leading" id="PAp-BS-83M"/>
-                                            <constraint firstAttribute="trailing" secondItem="71B-Kb-LB8" secondAttribute="trailing" id="QzE-Cm-YVq"/>
+                                            <constraint firstItem="hyl-Fm-0oi" firstAttribute="leading" secondItem="HuU-TD-Bs7" secondAttribute="leading" constant="8" id="Kjk-dC-nV0"/>
+                                            <constraint firstItem="hyl-Fm-0oi" firstAttribute="top" secondItem="71B-Kb-LB8" secondAttribute="bottom" constant="4" id="MZ6-o2-Tia"/>
+                                            <constraint firstItem="dMJ-Oo-XdS" firstAttribute="leading" secondItem="HuU-TD-Bs7" secondAttribute="leading" constant="8" id="PAp-BS-83M"/>
+                                            <constraint firstAttribute="trailing" secondItem="71B-Kb-LB8" secondAttribute="trailing" constant="8" id="QzE-Cm-YVq"/>
                                             <constraint firstAttribute="trailing" secondItem="mTg-KM-aIe" secondAttribute="trailing" id="SFH-nI-TRu"/>
                                             <constraint firstAttribute="trailing" secondItem="dMJ-Oo-XdS" secondAttribute="trailing" id="VfX-Ig-lfI"/>
-                                            <constraint firstItem="9hv-64-pJj" firstAttribute="leading" secondItem="HuU-TD-Bs7" secondAttribute="leading" id="Xia-ZP-wMQ"/>
-                                            <constraint firstItem="mTg-KM-aIe" firstAttribute="leading" secondItem="HuU-TD-Bs7" secondAttribute="leading" id="Y1V-f3-o0c"/>
-                                            <constraint firstAttribute="trailing" secondItem="hyl-Fm-0oi" secondAttribute="trailing" id="ch1-rS-IRa"/>
+                                            <constraint firstItem="9hv-64-pJj" firstAttribute="leading" secondItem="HuU-TD-Bs7" secondAttribute="leading" constant="8" id="Xia-ZP-wMQ"/>
+                                            <constraint firstItem="mTg-KM-aIe" firstAttribute="leading" secondItem="HuU-TD-Bs7" secondAttribute="leading" constant="8" id="Y1V-f3-o0c"/>
+                                            <constraint firstAttribute="trailing" secondItem="hyl-Fm-0oi" secondAttribute="trailing" constant="8" id="ch1-rS-IRa"/>
                                             <constraint firstAttribute="trailing" secondItem="5FQ-76-d3O" secondAttribute="trailing" id="uQh-0D-oB8"/>
                                             <constraint firstItem="9hv-64-pJj" firstAttribute="top" secondItem="mTg-KM-aIe" secondAttribute="bottom" constant="8" id="vXG-99-EyM"/>
                                             <constraint firstAttribute="trailing" secondItem="9hv-64-pJj" secondAttribute="trailing" id="zyo-No-69Z"/>
@@ -137,15 +127,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hJS-Nz-ieY" firstAttribute="top" secondItem="LSo-SZ-2FP" secondAttribute="bottom" constant="8" id="4LA-kA-R9X"/>
-                            <constraint firstAttribute="trailing" secondItem="LSo-SZ-2FP" secondAttribute="trailing" constant="8" id="5QJ-lp-7JJ"/>
-                            <constraint firstItem="Sub-c9-BGz" firstAttribute="top" secondItem="hJS-Nz-ieY" secondAttribute="bottom" constant="8" id="6TD-g6-AEe"/>
                             <constraint firstAttribute="trailing" secondItem="xZz-qb-AQg" secondAttribute="trailing" id="Grb-6b-lCk"/>
                             <constraint firstItem="xZz-qb-AQg" firstAttribute="leading" secondItem="MuK-LO-GRV" secondAttribute="leading" id="JAb-9J-adW"/>
-                            <constraint firstItem="LSo-SZ-2FP" firstAttribute="leading" secondItem="MuK-LO-GRV" secondAttribute="leading" constant="8" id="Rvl-lQ-X4r"/>
-                            <constraint firstItem="LSo-SZ-2FP" firstAttribute="centerX" secondItem="MuK-LO-GRV" secondAttribute="centerX" id="hIg-bt-HGO"/>
-                            <constraint firstItem="hJS-Nz-ieY" firstAttribute="centerX" secondItem="MuK-LO-GRV" secondAttribute="centerX" id="rGW-Bh-CCb"/>
-                            <constraint firstItem="LSo-SZ-2FP" firstAttribute="top" secondItem="xZz-qb-AQg" secondAttribute="bottom" constant="8" id="xNf-MD-ERA"/>
+                            <constraint firstItem="Sub-c9-BGz" firstAttribute="top" secondItem="xZz-qb-AQg" secondAttribute="bottom" id="dyH-km-dUK"/>
                             <constraint firstItem="xZz-qb-AQg" firstAttribute="top" secondItem="EfL-Dq-EIR" secondAttribute="bottom" id="zyw-1O-C1T"/>
                         </constraints>
                     </view>
@@ -169,67 +153,78 @@
                         <viewControllerLayoutGuide type="bottom" id="trG-Kj-wWy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4GH-vz-xza">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="Lyt-RW-ufT">
                                 <rect key="frame" x="0.0" y="102" width="320" height="184"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Lyt-RW-ufT" secondAttribute="height" multiplier="40:23" id="5vv-2E-Zae"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZx-2B-hFa">
-                                <rect key="frame" x="81" y="294" width="158" height="22"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wd3-bR-6W5" userLabel="Label Container">
+                                <rect key="frame" x="20" y="294" width="280" height="129"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a picture." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZx-2B-hFa">
+                                        <rect key="frame" x="67" y="1" width="146" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="146" id="QU2-ew-h1a"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share expressions." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qy-9S-OWO">
+                                        <rect key="frame" x="67" y="31" width="146" height="22"/>
+                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3i-GN-q1u">
+                                        <rect key="frame" x="96" y="91" width="89" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="89" id="MGb-0B-7MY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="14"/>
+                                        <state key="normal" title="Get Image">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getImage:" destination="llV-4K-89b" eventType="touchUpInside" id="mBZ-HM-wtg"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check your mood." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hw0-0E-LGH">
+                                        <rect key="frame" x="67" y="61" width="146" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="146" id="U8E-7p-u40"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="VbX-4f-VsN"/>
+                                    <constraint firstItem="hw0-0E-LGH" firstAttribute="centerX" secondItem="Wd3-bR-6W5" secondAttribute="centerX" id="1ek-ql-Wya"/>
+                                    <constraint firstItem="8qy-9S-OWO" firstAttribute="top" secondItem="VZx-2B-hFa" secondAttribute="bottom" constant="8" id="4x4-d9-DAJ"/>
+                                    <constraint firstItem="8qy-9S-OWO" firstAttribute="centerY" secondItem="Wd3-bR-6W5" secondAttribute="centerY" constant="-22" id="Bfk-Uf-Vad"/>
+                                    <constraint firstItem="VZx-2B-hFa" firstAttribute="centerX" secondItem="Wd3-bR-6W5" secondAttribute="centerX" id="QKP-uE-aoz"/>
+                                    <constraint firstItem="hw0-0E-LGH" firstAttribute="top" secondItem="8qy-9S-OWO" secondAttribute="bottom" constant="8" id="jHV-4E-Fvk"/>
+                                    <constraint firstItem="8qy-9S-OWO" firstAttribute="centerX" secondItem="Wd3-bR-6W5" secondAttribute="centerX" id="mGJ-I4-clI"/>
+                                    <constraint firstItem="n3i-GN-q1u" firstAttribute="top" secondItem="hw0-0E-LGH" secondAttribute="bottom" constant="8" id="tmP-Ap-4a1"/>
+                                    <constraint firstItem="n3i-GN-q1u" firstAttribute="centerX" secondItem="Wd3-bR-6W5" secondAttribute="centerX" id="tsU-ER-d5g"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check your mood." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hw0-0E-LGH">
-                                <rect key="frame" x="81" y="324" width="158" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="eJ9-iF-Ftr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share expressions." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qy-9S-OWO">
-                                <rect key="frame" x="81" y="354" width="158" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="WSV-kr-1T1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3i-GN-q1u">
-                                <rect key="frame" x="116" y="384" width="89" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="89" id="7na-IL-cVI"/>
-                                </constraints>
-                                <state key="normal" title="Get Image">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="getImage:" destination="llV-4K-89b" eventType="touchUpInside" id="mBZ-HM-wtg"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.9882352941176471" green="0.78823529411764703" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Lyt-RW-ufT" secondAttribute="trailing" id="Bfe-36-ceE"/>
-                            <constraint firstItem="VZx-2B-hFa" firstAttribute="top" secondItem="Lyt-RW-ufT" secondAttribute="bottom" constant="8" id="Bwe-7d-glP"/>
-                            <constraint firstItem="VZx-2B-hFa" firstAttribute="centerX" secondItem="4GH-vz-xza" secondAttribute="centerX" id="CzG-kK-iMI"/>
                             <constraint firstItem="Lyt-RW-ufT" firstAttribute="top" secondItem="trw-Hb-OhX" secondAttribute="bottom" constant="38" id="JKE-mD-0Xj"/>
-                            <constraint firstItem="8qy-9S-OWO" firstAttribute="centerX" secondItem="4GH-vz-xza" secondAttribute="centerX" id="Y7g-2p-z9R"/>
-                            <constraint firstItem="n3i-GN-q1u" firstAttribute="top" secondItem="8qy-9S-OWO" secondAttribute="bottom" constant="8" id="d8s-C9-fFS"/>
-                            <constraint firstItem="trG-Kj-wWy" firstAttribute="top" secondItem="Lyt-RW-ufT" secondAttribute="bottom" constant="145" id="hh8-l9-A3T"/>
-                            <constraint firstItem="hw0-0E-LGH" firstAttribute="centerX" secondItem="4GH-vz-xza" secondAttribute="centerX" id="k2i-dg-Qn4"/>
-                            <constraint firstItem="hw0-0E-LGH" firstAttribute="top" secondItem="VZx-2B-hFa" secondAttribute="bottom" constant="8" id="ogx-na-6U3"/>
-                            <constraint firstItem="n3i-GN-q1u" firstAttribute="centerX" secondItem="4GH-vz-xza" secondAttribute="centerX" id="ptB-xs-sbe"/>
+                            <constraint firstItem="trG-Kj-wWy" firstAttribute="top" secondItem="Wd3-bR-6W5" secondAttribute="bottom" constant="8" id="NhM-e6-4QD"/>
+                            <constraint firstAttribute="trailing" secondItem="Wd3-bR-6W5" secondAttribute="trailing" constant="20" id="fxZ-6P-zVp"/>
+                            <constraint firstItem="Wd3-bR-6W5" firstAttribute="leading" secondItem="4GH-vz-xza" secondAttribute="leading" constant="20" id="gEi-B8-MrQ"/>
                             <constraint firstItem="Lyt-RW-ufT" firstAttribute="leading" secondItem="4GH-vz-xza" secondAttribute="leading" id="r0Z-0K-Ucf"/>
-                            <constraint firstItem="8qy-9S-OWO" firstAttribute="top" secondItem="hw0-0E-LGH" secondAttribute="bottom" constant="8" id="tQt-wx-zhE"/>
+                            <constraint firstItem="Wd3-bR-6W5" firstAttribute="top" secondItem="Lyt-RW-ufT" secondAttribute="bottom" constant="8" id="sDz-Du-Shv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Get Visage" id="G0b-qW-qqf"/>
@@ -255,8 +250,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UqW-7E-WGl" userLabel="Style View">
+                                <rect key="frame" x="8" y="20" width="304" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLE-fR-SaD">
                                 <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Qse-eJ-DKY"/>
                                 </constraints>
@@ -282,39 +282,39 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="AbI-Bm-MlK"/>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Joy: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q36-Vc-Pph">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" text="Joy: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q36-Vc-Pph">
                                 <rect key="frame" x="20" y="276" width="280" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="sQG-V3-xhk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Sorrow:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76D-cw-bvJ">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" text="Sorrow:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76D-cw-bvJ">
                                 <rect key="frame" x="20" y="305" width="280" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ZGt-AE-3TI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Anger:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pk6-aJ-5nS">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" text="Anger:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pk6-aJ-5nS">
                                 <rect key="frame" x="20" y="334" width="280" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="EKB-Lm-bS9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Surprise:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmw-9C-Lap">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" text="Surprise:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmw-9C-Lap">
                                 <rect key="frame" x="20" y="363" width="280" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="oEm-Kc-4FL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -323,13 +323,15 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="sV4-rT-XMY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes"/>
                             </textField>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOL-jb-nBW">
-                                <rect key="frame" x="257" y="28" width="43" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="Delete"/>
+                                <rect key="frame" x="255" y="28" width="45" height="20"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="15"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="deleteImage:" destination="6Kr-B8-aUu" eventType="touchUpInside" id="t2s-gv-yyH"/>
                                 </connections>
@@ -338,20 +340,24 @@
                                 <rect key="frame" x="20" y="56" width="280" height="204"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.78823529411764703" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Q36-Vc-Pph" secondAttribute="trailing" constant="20" id="18F-OL-Rhs"/>
                             <constraint firstItem="mmw-9C-Lap" firstAttribute="top" secondItem="pk6-aJ-5nS" secondAttribute="bottom" constant="8" id="5f5-Ld-q0O"/>
                             <constraint firstItem="odP-tp-iOE" firstAttribute="top" secondItem="mmw-9C-Lap" secondAttribute="bottom" constant="8" id="7IL-uc-Rct"/>
                             <constraint firstAttribute="trailing" secondItem="pk6-aJ-5nS" secondAttribute="trailing" constant="20" id="8NM-eg-V4s"/>
+                            <constraint firstItem="UqW-7E-WGl" firstAttribute="top" secondItem="R64-bJ-itn" secondAttribute="bottom" id="Egp-79-ewF"/>
                             <constraint firstAttribute="trailing" secondItem="NOL-jb-nBW" secondAttribute="trailing" constant="20" id="F69-F5-cDo"/>
                             <constraint firstItem="GLE-fR-SaD" firstAttribute="leading" secondItem="BSd-TC-CvB" secondAttribute="leading" id="FJN-rq-sc8"/>
                             <constraint firstAttribute="trailing" secondItem="GLE-fR-SaD" secondAttribute="trailing" id="HbS-2F-XWx"/>
                             <constraint firstItem="gha-qa-8tv" firstAttribute="leading" secondItem="BSd-TC-CvB" secondAttribute="leading" constant="20" id="NnC-7W-Uc6"/>
                             <constraint firstAttribute="trailing" secondItem="gha-qa-8tv" secondAttribute="trailing" constant="20" id="SHN-KA-Kqb"/>
                             <constraint firstAttribute="trailing" secondItem="mmw-9C-Lap" secondAttribute="trailing" constant="20" id="Sbg-pK-Ybr"/>
+                            <constraint firstItem="GLE-fR-SaD" firstAttribute="top" secondItem="UqW-7E-WGl" secondAttribute="bottom" id="T20-Lq-YnO"/>
                             <constraint firstItem="odP-tp-iOE" firstAttribute="leading" secondItem="BSd-TC-CvB" secondAttribute="leading" constant="20" id="Tjs-Px-y2D"/>
+                            <constraint firstAttribute="trailing" secondItem="UqW-7E-WGl" secondAttribute="trailing" constant="8" id="Tmz-RV-BpR"/>
                             <constraint firstItem="76D-cw-bvJ" firstAttribute="top" secondItem="Q36-Vc-Pph" secondAttribute="bottom" constant="8" id="ViM-sh-dHi"/>
+                            <constraint firstItem="UqW-7E-WGl" firstAttribute="leading" secondItem="BSd-TC-CvB" secondAttribute="leading" constant="8" id="X97-qV-CO1"/>
                             <constraint firstItem="GLE-fR-SaD" firstAttribute="top" secondItem="odP-tp-iOE" secondAttribute="bottom" constant="14" id="a1M-JX-1ue"/>
                             <constraint firstAttribute="bottomMargin" secondItem="GLE-fR-SaD" secondAttribute="bottom" id="cgM-b6-gBX"/>
                             <constraint firstItem="Q36-Vc-Pph" firstAttribute="top" secondItem="gha-qa-8tv" secondAttribute="bottom" constant="16" id="cgX-jR-M0z"/>
@@ -390,7 +396,7 @@
             <objects>
                 <tabBarController id="nw4-b1-feU" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="U9l-YM-wHJ">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="U9l-YM-wHJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -430,7 +436,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pid-Zk-hzP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Collection" image="Collection" selectedImage="Collection" id="YFg-gU-mN7"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RZh-hd-07B">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="RZh-hd-07B">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -450,6 +456,6 @@
         <image name="Header" width="400" height="264"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ahR-JI-iWi"/>
+        <segue reference="ntW-zJ-LHx"/>
     </inferredMetricsTieBreakers>
 </document>
