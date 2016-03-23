@@ -282,7 +282,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="AbI-Bm-MlK"/>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" text="Joy: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q36-Vc-Pph">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" text="Joy:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q36-Vc-Pph">
                                 <rect key="frame" x="20" y="276" width="280" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="sQG-V3-xhk"/>

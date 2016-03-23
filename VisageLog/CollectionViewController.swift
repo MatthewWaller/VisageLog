@@ -81,9 +81,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
             let retrievedImage = CloudVisionClient.sharedInstance().getImage(filename!)
             
             cell.imageView.image = retrievedImage
-    
-            
-            
             
             let feelingsArray = [imageFile.joyResponse, imageFile.angerResponse, imageFile.sorrowResponse, imageFile.surpriseResponse]
             
@@ -94,9 +91,16 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
                 let splitFeelingArray = feeling?.characters.split{$0 == ":"}.map(String.init)
                 //from here http://stackoverflow.com/questions/25678373/swift-split-a-string-into-an-array
                 
-                let compactFeeling = splitFeelingArray![1]
-                compactFeelings.append(compactFeeling)
+                if splitFeelingArray?.count < 2 {
+                    
+                    compactFeelings.append(" Uknown") //If one of the responses isn't there, but the user saves the picture, do this.
                 
+                } else {
+                
+                    let compactFeeling = splitFeelingArray![1]
+                    compactFeelings.append(compactFeeling)
+                    
+                }
             }
             
             cell.joyLabel.text = "Joy:\(compactFeelings[0])"
