@@ -49,17 +49,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
             
         }
         
-        //Adding gesture recognizer things here: http://stackoverflow.com/questions/18848725/long-press-gesture-on-uicollectionviewcell
-        
-        let lpgr = UILongPressGestureRecognizer(target: self, action: "handleLongPress:")
-        lpgr.minimumPressDuration = 0.5
-        lpgr.delegate = self
-        lpgr.delaysTouchesBegan = true
-        self.collectionView?.addGestureRecognizer(lpgr)
-        
-    
-        
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -150,8 +139,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         performSegueWithIdentifier("fromCollectionView", sender: self)
         
-        
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -160,50 +147,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
             analyzingViewController.photoToEdit = selectedPhoto
             
         }
-    }
-    
-    func handleLongPress(gestureRecognizer : UILongPressGestureRecognizer){
-        
-        let p = gestureRecognizer.locationInView(self.collectionView)
-        
-        if let indexPath = (self.collectionView?.indexPathForItemAtPoint(p))! as NSIndexPath? {
-           deleteAlert(indexPath)
-        }
-        
-    }
-    
-    func UIAlertControllerForDeletion(message: String?, indexPath: NSIndexPath) -> UIAlertController {
-        
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes, delete", style: .Default, handler: { (alert: UIAlertAction!) -> Void in
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                
-                self.doDeletion(indexPath)
-                
-            })
-        })
-)
-        return alert
-    }
-    
-    func deleteAlert(indexPath: NSIndexPath){
-        
-        if self.presentedViewController == nil {
-        
-       self.presentViewController(UIAlertControllerForDeletion("Are you sure you want to delete?", indexPath: indexPath), animated: true, completion: nil)
-        }
-        
-        
-    }
-    
-    func doDeletion(indexPath: NSIndexPath){
-        
-        let picToDelete = fetchedResultsController.objectAtIndexPath(indexPath) as! Photo
-        sharedContext.deleteObject(picToDelete)
-        CoreDataStackManager.sharedInstance().saveContext()
-        
-        
     }
     
     // MARK: - Fetched Results Controller Delegate

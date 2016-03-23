@@ -72,12 +72,12 @@ class CloudVisionClient {
     func base64EncodeImage(image: UIImage) -> String {
         var imagedata = UIImagePNGRepresentation(image)
         
-        // Resize the image if it exceeds the 2MB API limit
-        if (imagedata?.length > 2097152) {
+        // Resize the image so that it doesn't exceed the 2MB API limit
+        
             let oldSize: CGSize = image.size
-            let newSize: CGSize = CGSizeMake(800, oldSize.height / oldSize.width * 800)
+            let newSize: CGSize = CGSizeMake(400, oldSize.height / oldSize.width * 400)
             imagedata = resizeImage(newSize, image: image)
-        }
+        
         
         return imagedata!.base64EncodedStringWithOptions(.EncodingEndLineWithCarriageReturn)
     }

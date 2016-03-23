@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class AnalyzePhotoViewController: UIViewController, UITextFieldDelegate {
     
@@ -23,6 +24,10 @@ class AnalyzePhotoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var faceImageView: UIImageView!
     @IBOutlet weak var toolbar: UIToolbar!
     
+    @IBOutlet weak var deleteButton: UIButton!
+     var sharedContext = CoreDataStackManager.sharedInstance().managedObjectContext
+    
+    
     var photoToEdit: Photo?
     
     override func viewDidLoad() {
@@ -36,6 +41,7 @@ class AnalyzePhotoViewController: UIViewController, UITextFieldDelegate {
             sorrowLabel.text = photoToEdit?.sorrowResponse
             surpriseLabel.text = photoToEdit?.surpriseResponse
             noteTextField.text = photoToEdit?.myNote
+            deleteButton.hidden = false
             
         } else {
         
@@ -188,6 +194,15 @@ class AnalyzePhotoViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    @IBAction func deleteImage(sender: UIButton) {
+        
+        sharedContext.deleteObject(photoToEdit!)
+        CoreDataStackManager.sharedInstance().saveContext()
+        navigationController?.popViewControllerAnimated(true)
+        
+    }
+    
+    
     @IBAction func shareAction(sender: UIBarButtonItem) {
         
         let sharingImage = generateShareImage()
@@ -253,11 +268,6 @@ class AnalyzePhotoViewController: UIViewController, UITextFieldDelegate {
     //MARK: Keyboard things
     
     var keyboardIsExternal = false
-    
-    func textFieldDidBeginEditing(textField: UITextField) {
-        
-        textField.text = ""
-    }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
